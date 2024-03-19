@@ -7,8 +7,10 @@
     "webpack-dev-server": "^5.0.3"
   },
   "scripts": {
-    "start:dev": "webpack --config webpack.dev.js",
+    "start:dev": "npx webpack-dev-server --config webpack.dev.js",
+    "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
+    "start:prod": "npx webpack-dev-server --config webpack.prod.js",
     "lint": "eslint ."
   },
   "husky": {
