@@ -11,7 +11,8 @@
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
     "start:prod": "npx webpack-dev-server --config webpack.prod.js",
-    "lint": "eslint ."
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix"
   },
   "husky": {
     "hooks": {
@@ -19,11 +20,6 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.js": [
-        "eslint --fix",
-        "git add"
-      ]
-    }
+    "*.(js|jsx)": ["npm run lint:write", "git add"]
   }
 }
