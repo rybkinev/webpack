@@ -1,4 +1,4 @@
 console.debug('Hello!!');
 console.debug('Upd');
-console.debug('create error')
+console.debug('any string')
 console.debug('end file');
